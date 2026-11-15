@@ -24,3 +24,9 @@ The goals and their reasons are in `README.md`, "Design goals". What they mean f
 - No dependencies, bundler or framework; the popup stays one plain HTML control
 - A feature that needs any of the above, or adds a second job besides the starting quality, is
   proposed in an issue first, not built
+
+## Releasing
+
+- Store listing text: `store/listing.md`. Icons and store images are rendered from
+  `icons/icon.svg` and `store/*.html`: `npm install --no-save playwright && npx playwright install
+  chromium && node scripts/render-images.mjs`, then commit the PNGs
