@@ -1,4 +1,4 @@
-# Auto Quality for YouTube — agent notes
+# Prince Auto Quality for YouTube — agent notes
 
 Everything in this repository is public: write nothing personal into it.
 

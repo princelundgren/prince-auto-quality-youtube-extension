@@ -1,4 +1,4 @@
-# Auto Quality for YouTube
+# Prince Auto Quality for YouTube™
 
 [![Test](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml/badge.svg)](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml)
 
@@ -71,3 +71,6 @@ Issues and pull requests are welcome.
 ## License
 
 [MIT](LICENSE)
+
+YouTube is a trademark of Google LLC. Use of this trademark is subject to Google Permissions.
+This project is not made, endorsed or sponsored by Google or YouTube.
