@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Quality for YouTube",
+  "version": "0.1.0",
+  "description": "Starts YouTube videos at the quality you choose, with no switch or restart after playback begins.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/quality.js", "src/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "Auto Quality for YouTube",
+    "default_popup": "src/popup.html"
+  }
+}
