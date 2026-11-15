@@ -5,7 +5,7 @@ for (const { value, label } of QUALITY_OPTIONS) {
 }
 
 chrome.storage.sync.get({ quality: DEFAULT_QUALITY }).then(({ quality }) => {
-  select.value = String(quality);
+  select.value = String(validQuality(quality));
 });
 
 select.addEventListener("change", () => {

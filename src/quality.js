@@ -32,6 +32,23 @@ function savedQualityEntry(height, now) {
   });
 }
 
+/**
+ * Returns the stored setting when it is one of the options, or the default otherwise, so a
+ * cleared, hand-edited or future value never reaches YouTube's player.
+ *
+ * @param {unknown} stored The `quality` value read from `chrome.storage.sync`.
+ * @returns {number | "auto"} A value from `QUALITY_OPTIONS`.
+ */
+function validQuality(stored) {
+  return QUALITY_OPTIONS.some((option) => option.value === stored) ? stored : DEFAULT_QUALITY;
+}
+
 if (typeof module !== "undefined") {
-  module.exports = { PLAYER_QUALITY_KEY, DEFAULT_QUALITY, QUALITY_OPTIONS, savedQualityEntry };
+  module.exports = {
+    PLAYER_QUALITY_KEY,
+    DEFAULT_QUALITY,
+    QUALITY_OPTIONS,
+    savedQualityEntry,
+    validQuality,
+  };
 }

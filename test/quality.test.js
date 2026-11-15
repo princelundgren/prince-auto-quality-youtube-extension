@@ -21,7 +21,7 @@ test("the default quality is one of the options", () => {
   assert.ok(QUALITY_OPTIONS.some((option) => option.value === DEFAULT_QUALITY));
 });
 
-test("the content script runs before YouTube's player can read its saved quality", () => {
+test("the content script runs at document_start, after the shared quality.js", () => {
   const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "manifest.json"), "utf8"));
   const [script] = manifest.content_scripts;
 
