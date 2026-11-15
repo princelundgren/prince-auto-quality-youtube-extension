@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0; width: 1280px; height: 800px; display: flex; align-items: center;
+        justify-content: space-between; padding: 0 110px; box-sizing: border-box;
+        background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff;
+        font-family: system-ui, sans-serif;
+      }
+      h1 { font-size: 52px; margin: 28px 0 4px; line-height: 1.1; }
+      .for { font-size: 28px; opacity: 0.85; margin: 0 0 36px; }
+      ul { list-style: none; padding: 0; margin: 0; font-size: 24px; line-height: 1.9; }
+      li::before { content: "✓  "; font-weight: 700; }
+      .popup {
+        background: #fff; border-radius: 16px; padding: 8px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      }
+      iframe { border: 0; width: 250px; height: 98px; zoom: 1.8; display: block; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="../icons/icon.svg" width="120" height="120" alt="" />
+      <h1>Prince Auto Quality</h1>
+      <p class="for">for YouTube™</p>
+      <ul>
+        <li>Every video starts at the quality you pick</li>
+        <li>No switch, no restart once it plays</li>
+        <li>Nothing runs while you watch</li>
+      </ul>
+    </div>
+    <div class="popup"><iframe src="../src/popup.html" title="The extension's popup"></iframe></div>
+  </body>
+</html>

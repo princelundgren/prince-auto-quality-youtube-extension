@@ -1,4 +1,4 @@
-# Auto Quality for YouTube
+# Prince Auto Quality for YouTube™
 
 [![Test](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml/badge.svg)](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml)
 
@@ -17,9 +17,10 @@ there. It leaves YouTube Music and videos embedded in other websites alone on pu
   video, with timers, page observers or polling. This one writes one value when a YouTube page
   opens, then only waits for you to change the setting. There is no background service worker, so
   nothing of it runs outside the YouTube tab.
-- **Tiny.** Under 4 KB in five files, under 50 lines of JavaScript, no dependencies.
-- **One permission.** `storage`, on `www.youtube.com` only. No access to other sites, no network
-  requests, no tracking.
+- **Small enough to read.** A few files of plain JavaScript, no dependencies and no build step:
+  the store package holds the same code as this repository.
+- **One permission.** `storage`, plus access to `www.youtube.com` only. No access to other sites,
+  no network requests, no tracking ([privacy](PRIVACY.md)).
 
 ## Design goals
 
@@ -44,7 +45,8 @@ It isn't in the Chrome Web Store yet. To load it unpacked in Chrome, Brave, Edge
 Chromium browser:
 
 1. Clone or download this repository
-2. Open `chrome://extensions` (`brave://extensions` in Brave) and turn on **Developer mode**
+2. Open `chrome://extensions` (`brave://extensions` in Brave, `edge://extensions` in Edge) and turn
+   on **Developer mode**
 3. Click **Load unpacked** and choose the repository folder
 4. Click the extension's toolbar button and pick a quality
 
@@ -66,8 +68,12 @@ node --test
 The tests need Node 22 or newer and no dependencies. Reload the extension in `chrome://extensions`
 after changing a file.
 
-Issues and pull requests are welcome.
+Bug reports and pull requests are welcome. A new feature starts as an issue: the design goals
+above keep the extension to one job.
 
 ## License
 
 [MIT](LICENSE)
+
+YouTube is a trademark of Google LLC. Use of this trademark is subject to Google Permissions.
+This project is not made, endorsed or sponsored by Google or YouTube.
