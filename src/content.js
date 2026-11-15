@@ -1,6 +1,7 @@
 // The page's localStorage is shared with this isolated-world script, so no page-context script is needed.
 
-function applyQuality(quality) {
+function applyQuality(stored) {
+  const quality = validQuality(stored);
   if (quality === "auto") {
     localStorage.removeItem(PLAYER_QUALITY_KEY);
   } else {
