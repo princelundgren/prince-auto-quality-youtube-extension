@@ -19,8 +19,12 @@ test("nothing keeps running after the page starts", () => {
 });
 
 test("it asks for one permission on one site and makes no network requests", () => {
+  assert.deepEqual(
+    Object.keys(manifest).sort(),
+    ["action", "content_scripts", "description", "icons", "manifest_version", "name", "permissions", "version"],
+    "a new manifest key can grant access, so adding one is a deliberate change to this test",
+  );
   assert.deepEqual(manifest.permissions, ["storage"]);
-  assert.equal(manifest.host_permissions, undefined);
   assert.deepEqual(
     manifest.content_scripts.flatMap((script) => script.matches),
     ["https://www.youtube.com/*"],

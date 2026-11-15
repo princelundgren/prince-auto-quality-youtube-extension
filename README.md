@@ -17,7 +17,8 @@ there. It leaves YouTube Music and videos embedded in other websites alone on pu
   video, with timers, page observers or polling. This one writes one value when a YouTube page
   opens, then only waits for you to change the setting. There is no background service worker, so
   nothing of it runs outside the YouTube tab.
-- **Tiny.** Under 4 KB in five files, under 50 lines of JavaScript, no dependencies.
+- **Small enough to read.** A few files of plain JavaScript, no dependencies and no build step:
+  the store package holds the same code as this repository.
 - **One permission.** `storage`, plus access to `www.youtube.com` only. No access to other sites,
   no network requests, no tracking ([privacy](PRIVACY.md)).
 
