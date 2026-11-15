@@ -25,6 +25,9 @@ test("it asks for one permission on one site and makes no network requests", () 
     manifest.content_scripts.flatMap((script) => script.matches),
     ["https://www.youtube.com/*"],
   );
+  for (const script of manifest.content_scripts) {
+    assert.notEqual(script.all_frames, true, "embedded videos on other websites are left alone");
+  }
   const network = /\b(fetch|XMLHttpRequest|WebSocket|EventSource|sendBeacon)\b/;
   for (const { name, code } of sources) {
     assert.doesNotMatch(code, network, `${name} makes a network request`);

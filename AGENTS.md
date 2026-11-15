@@ -18,7 +18,9 @@ The goals and their reasons are in `README.md`, "Design goals". What they mean f
 - No background service worker, timers (`setInterval`, `setTimeout`, `requestAnimationFrame`),
   `MutationObserver`, polling or network calls in `src/`; `test/design-goals.test.js` enforces
   this and the permissions below
-- Permissions stay `storage` alone, on `https://www.youtube.com/*` alone
+- Permissions stay `storage` alone, on `https://www.youtube.com/*` alone, top frame only: videos
+  embedded in other websites are left alone by the maintainer's decision, so no `all_frames` and
+  no `youtube-nocookie.com`
 - No dependencies, bundler or framework; the popup stays one plain HTML control
 - A feature that needs any of the above, or adds a second job besides the starting quality, is
   proposed in an issue first, not built
