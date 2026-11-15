@@ -4,12 +4,11 @@
       <stop offset="0" stop-color="#4f46e5"/>
       <stop offset="1" stop-color="#7c3aed"/>
     </linearGradient>
+    <mask id="hub">
+      <rect width="96" height="96" fill="#fff"/>
+      <path d="M40.80,34.66L63.80,48L40.80,61.34Z" fill="#000" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
+    </mask>
   </defs>
   <rect width="96" height="96" rx="22" fill="url(#bg)"/>
-  <g fill="#fff">
-    <rect x="18" y="58" width="12" height="20" rx="3" opacity="0.55"/>
-    <rect x="35" y="46" width="12" height="32" rx="3" opacity="0.7"/>
-    <rect x="52" y="33" width="12" height="45" rx="3" opacity="0.85"/>
-    <rect x="69" y="18" width="12" height="60" rx="3"/>
-  </g>
+  <path d="M41.58,21.26L42.95,14.38L53.05,14.38L54.42,21.26L62.37,24.55L68.20,20.65L75.35,27.80L71.45,33.63L74.74,41.58L81.62,42.95L81.62,53.05L74.74,54.42L71.45,62.37L75.35,68.20L68.20,75.35L62.37,71.45L54.42,74.74L53.05,81.62L42.95,81.62L41.58,74.74L33.63,71.45L27.80,75.35L20.65,68.20L24.55,62.37L21.26,54.42L14.38,53.05L14.38,42.95L21.26,41.58L24.55,33.63L20.65,27.80L27.80,20.65L33.63,24.55Z" fill="#fff" stroke="#fff" stroke-width="5" stroke-linejoin="round" mask="url(#hub)"/>
 </svg>
