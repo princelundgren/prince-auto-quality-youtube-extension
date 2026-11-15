@@ -2,7 +2,9 @@
 
 [![Test](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml/badge.svg)](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml)
 
-A small Chromium extension that starts every YouTube video at the quality you choose.
+A small Chromium extension that starts every video on youtube.com at the quality you choose.
+`youtube.com`, `youtu.be` and, on a desktop browser, `m.youtube.com` links all redirect there.
+Videos embedded in other websites and YouTube Music are not covered.
 
 Most auto-quality extensions wait for the player to load and then switch quality, so the video
 starts at a lower quality and jumps, or restarts, a moment later. This one writes your choice to
