@@ -1,11 +1,12 @@
 # Chrome Web Store listing
 
-The text to paste into the Developer Dashboard. The name and summary come from `manifest.json`.
+What to enter in the Developer Dashboard. The name and summary come from `manifest.json`.
 
 ## Store listing
 
-**Description**
+**Description:** paste the block below, and nothing else.
 
+```text
 Starts every YouTube™ video, Shorts included, at the quality you choose: 4K, 1440p, 1080p or any other, or Auto to let YouTube decide.
 
 How it differs from other auto-quality extensions:
@@ -18,13 +19,28 @@ It leaves YouTube Music and videos embedded on other websites alone.
 
 Open source (MIT): https://github.com/princelundgren/prince-auto-quality-youtube-extension
 
+Made by Prince Lundgren: https://princelundgren.com
+Like it? Buy me a coffee: https://ko-fi.com/princelundgren
+
 YouTube is a trademark of Google LLC. Use of this trademark is subject to Google Permissions. This extension is not made, endorsed or sponsored by Google or YouTube.
+```
 
-**Images:** icon from the package (`icons/icon-128.png`), screenshot `store/screenshot.png`, small
-promo tile `store/promo-small.png`.
+**Category:** Entertainment. **Language:** English.
 
-**Homepage URL:** https://github.com/princelundgren/prince-auto-quality-youtube-extension
-**Support URL:** https://github.com/princelundgren/prince-auto-quality-youtube-extension/issues
+**Graphic assets**
+
+- Store icon: `icons/icon-128.png`
+- Screenshot: `store/screenshot.png` (1280×800, no alpha)
+- Small promo tile: `store/promo-small.png` (440×280, no alpha)
+- Global promo video and marquee promo tile: none
+
+**Additional fields**
+
+- Official URL: a site verified in Google Search Console for the publisher account, if one is; else
+  empty
+- Homepage URL: https://github.com/princelundgren/prince-auto-quality-youtube-extension
+- Support URL: https://github.com/princelundgren/prince-auto-quality-youtube-extension/issues
+- Mature content: off
 
 ## Privacy practices
 

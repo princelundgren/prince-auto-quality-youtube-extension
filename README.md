@@ -71,6 +71,11 @@ after changing a file.
 Bug reports and pull requests are welcome. A new feature starts as an issue: the design goals
 above keep the extension to one job.
 
+## Support
+
+Made by [Prince Lundgren](https://princelundgren.com). If it saves you a few restarts, you can
+[buy me a coffee on Ko-fi](https://ko-fi.com/princelundgren).
+
 ## License
 
 [MIT](LICENSE)
