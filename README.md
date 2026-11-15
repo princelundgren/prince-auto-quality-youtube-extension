@@ -9,9 +9,22 @@ starts at a lower quality and jumps, or restarts, a moment later. This one write
 the setting YouTube's player reads when it starts (`yt-player-quality` in the page's
 localStorage), before the player loads. The video starts at that quality, with nothing to switch.
 
-- One setting, picked from the toolbar button: 360p to 4320p (8K), or Auto
-- A few dozen lines of code and one permission (`storage`); no timers, page observers or polling
-- No network requests, no tracking
+## Design goals
+
+1. **Does one thing.** It sets the quality a video starts at. Other YouTube tweaks belong in other
+   extensions, so this one stays small enough to read in a few minutes.
+2. **Costs nothing while you watch.** It writes one value as the page starts and then stops: no
+   background worker, no timers, no polling, no watching the page. The video gets the CPU and
+   memory, not the extension.
+3. **Never gets in the way of playback.** It changes nothing once a video is playing. If YouTube
+   stops reading the setting, videos still play normally at YouTube's own choice of quality.
+4. **Asks for as little as possible.** One permission (`storage`), one site (`www.youtube.com`),
+   no network requests, no tracking, no dependencies.
+5. **A UI you can use in one click.** One menu in the toolbar popup, plain HTML that follows your
+   light or dark theme, no settings page.
+
+The tests check what a script can see of goals 2 and 4 (no background worker, timers, page
+observers or network calls; one permission on one site), so a change that breaks them fails CI.
 
 ## Install
 
