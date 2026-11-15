@@ -2,14 +2,24 @@
 
 [![Test](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml/badge.svg)](https://github.com/princelundgren/prince-auto-quality-youtube-extension/actions/workflows/test.yml)
 
-A small Chromium extension that starts every video on youtube.com at the quality you choose.
-`youtube.com`, `youtu.be` and, on a desktop browser, `m.youtube.com` links all redirect there.
-It leaves YouTube Music and videos embedded in other websites alone on purpose.
+A small Chromium extension that starts every video on youtube.com, Shorts included, at the quality
+you choose. `youtube.com`, `youtu.be` and, on a desktop browser, `m.youtube.com` links all redirect
+there. It leaves YouTube Music and videos embedded in other websites alone on purpose.
 
-Most auto-quality extensions wait for the player to load and then switch quality, so the video
-starts at a lower quality and jumps, or restarts, a moment later. This one writes your choice to
-the setting YouTube's player reads when it starts (`yt-player-quality` in the page's
-localStorage), before the player loads. The video starts at that quality, with nothing to switch.
+## How it differs from other auto-quality extensions
+
+- **No switch, no restart.** An extension that sets quality through YouTube's player has to wait
+  until the player has loaded, so the video starts at a lower quality and then switches, and the
+  switch can jump it back to 0:00. This one writes your choice to the setting the player reads when
+  it starts (`yt-player-quality` in the page's localStorage), before it loads. The video starts at
+  your quality, with nothing to switch.
+- **Nothing runs while you watch.** Setting quality through the player means catching every new
+  video, with timers, page observers or polling. This one writes one value when a YouTube page
+  opens, then only waits for you to change the setting. There is no background service worker, so
+  nothing of it runs outside the YouTube tab.
+- **Tiny.** Under 4 KB in five files, under 50 lines of JavaScript, no dependencies.
+- **One permission.** `storage`, on `www.youtube.com` only. No access to other sites, no network
+  requests, no tracking.
 
 ## Design goals
 
