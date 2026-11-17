@@ -41,8 +41,17 @@ observers or network calls; one permission on one site), so a change that breaks
 
 ## Install
 
-It isn't in the Chrome Web Store yet. To load it unpacked in Chrome, Brave, Edge or another
-Chromium browser:
+Get it from the
+[Chrome Web Store](https://chromewebstore.google.com/detail/cgdljbbciifafcpfpkjjceikkfnmeodp), in
+Chrome, Brave, Edge or another Chromium browser:
+
+1. Open the store page and click **Add to Chrome** (**Add to Brave** in Brave). In Edge, first
+   select **Allow extensions from other stores** in the banner at the top of the page, then
+   **Get**
+2. Review the permissions and click **Add extension**
+3. Click the extension's toolbar button and pick a quality
+
+To run it from source instead:
 
 1. Clone or download this repository
 2. Open `chrome://extensions` (`brave://extensions` in Brave, `edge://extensions` in Edge) and turn
