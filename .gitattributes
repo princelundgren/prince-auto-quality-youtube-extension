@@ -2,6 +2,8 @@
 *.png binary
 
 # The store package (git archive) holds only what the browser loads, plus the license.
+/.claude export-ignore
+/.claude/** export-ignore
 /.github export-ignore
 /.github/** export-ignore
 /.gitattributes export-ignore
